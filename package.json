@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "SET NODE_ENV=development & node --watch server.js"
+    "dev": "SET NODE_ENV=development & node server.js"
   },
   "name": "back",
   "version": "1.0.0",
