@@ -1,5 +1,4 @@
 const admin = require("firebase-admin");
-const serviceAccount = require('./albazar-c3f51-firebase-adminsdk-fbsvc-4449c13ce4.json');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '../config.env') });
 
