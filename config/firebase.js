@@ -23,7 +23,7 @@ try {
     console.log('Firebase Admin SDK initialized successfully');
 } catch (error) {
     console.error('Firebase Admin initialization error:', error);
-    // Log specific error details for debugging
+    
     if (error.errorInfo) {
         console.error('Error code:', error.errorInfo.code);
         console.error('Error message:', error.errorInfo.message);
