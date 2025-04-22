@@ -38,6 +38,7 @@ dbConnection();
 mountRoute(app)
 app.get("/ping",(req,res,next)=>{
   res.status(200).send("pong")
+  
 })
 
 

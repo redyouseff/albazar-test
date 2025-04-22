@@ -178,6 +178,10 @@ const listingSchema = mongoose.Schema(
       type:Number,
       default:0
     },
+    currency:{
+      type:String,
+      
+    }
 
 
  
