@@ -184,6 +184,9 @@ const listingSchema = mongoose.Schema(
     },
     "carstatus":{
       type:String
+    },
+    "city":{
+      type:String
     }
 
 
