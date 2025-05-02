@@ -187,12 +187,13 @@ const listingSchema = mongoose.Schema(
     },
     "city":{
       type:String
+    },
+    "building age" :{
+      type:String,
+      
     }
 
 
-
-
- 
 
 
   },
