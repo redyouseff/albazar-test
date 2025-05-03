@@ -7,7 +7,7 @@ const listingSchema = mongoose.Schema(
       required: [true, "title is required"],
       trim: true,
       minLength: [5, "too short title"],
-      maxLength: [200, "too long title"],
+      maxLength: [50, "too long title"],
     },
 
     "description": {
