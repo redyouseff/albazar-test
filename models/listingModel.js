@@ -182,7 +182,7 @@ const listingSchema = mongoose.Schema(
       type:String
       
     },
-    "carstatus":{
+    "listing status":{
       type:String
     },
     "city":{
@@ -191,7 +191,31 @@ const listingSchema = mongoose.Schema(
     "building age" :{
       type:String,
       
+    },
+
+    "year":{
+      type:String
+    },
+    "type":{
+      type:String
+    },
+    "color":{
+      type:String
+    },
+    "inner part":{
+      type:String
+    },
+    "number of sets":{
+      type:String
+    },
+    "number of doors":{
+      type:String
+    },
+    "version":{
+      type:String
     }
+
+
 
 
 
