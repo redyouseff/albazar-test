@@ -228,8 +228,6 @@ const listingSchema = mongoose.Schema(
 
 
 
-
-
   },
   {
     timestamps: true,

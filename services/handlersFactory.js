@@ -21,7 +21,7 @@ const createOne=(model)=>{
          
     
             user.Balance=Balance-1;
-           await  user.save();
+         
    
         }
 
