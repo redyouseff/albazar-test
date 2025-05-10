@@ -218,6 +218,9 @@ const listingSchema = mongoose.Schema(
     },
     "floor":{
       type:String
+    },
+    "regulationStatus":{
+      type :String
     }
 
 
