@@ -173,6 +173,13 @@ const getUsersForSidebar = asyncHandler(async (req, res, next) => {
             else: "$senderUser.lastname"
           }
         },
+        phone: {
+          $cond: {
+            if: { $eq: ["$lastMessage.senderId", loggedInUserId] },
+            then: "$receiverUser.phone",
+            else: "$senderUser.phone"
+          }
+        },
         email: {
           $cond: {
             if: { $eq: ["$lastMessage.senderId", loggedInUserId] },
@@ -187,6 +194,7 @@ const getUsersForSidebar = asyncHandler(async (req, res, next) => {
             else: { $concat: [process.env.BASE_URL, "/users/", "$senderUser.profileImage"] }
           }
         },
+        
         lastMessage: {
           text: "$lastMessage.text",
           createdAt: "$lastMessage.createdAt",

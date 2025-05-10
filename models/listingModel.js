@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { stringify } = require("uuid");
 
 const listingSchema = mongoose.Schema(
   {
@@ -182,6 +183,7 @@ const listingSchema = mongoose.Schema(
       type:String
       
     },
+    
     "listing status":{
       type:String
     },
@@ -213,7 +215,12 @@ const listingSchema = mongoose.Schema(
     },
     "version":{
       type:String
+    },
+    "floor":{
+      type:String
     }
+
+
 
 
 
