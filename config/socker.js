@@ -1,7 +1,7 @@
 const {Server}=require("socket.io")
 const http=require("http");
 const express=require("express");
-const { Socket } = require("dgram");
+
 
 const app =express();
 const server=http.createServer(app)
@@ -22,11 +22,11 @@ io.on("connection",(Socket)=>{
     io.emit("getOnlineUsers",Object.keys(userSocketMap));
 
     Socket.on("disconnect",()=>{
-        console.log("A user disconnected", Socket.id);
+        console.log("A user disconnected", Socket.id);  
         delete  userSocketMap[userId];
         io.emit("getOnlineUsers", Object.keys(userSocketMap));
     })
-})
+})  
 
 module.exports={io,app,server,getReceiverSocketId}
 

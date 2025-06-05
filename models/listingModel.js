@@ -87,9 +87,7 @@ const listingSchema = mongoose.Schema(
       type: String,
     },
 
-    "contact method": {
-      type: String,
-    },
+    "contact method": [String],
 
     "images": [String],
 
@@ -221,6 +219,9 @@ const listingSchema = mongoose.Schema(
     },
     "regulationStatus":{
       type :String
+    },
+    "publishedVia":{
+      type:String
     }
 
 

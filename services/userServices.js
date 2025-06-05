@@ -70,6 +70,8 @@ const updateUser=asyncHandler(async(req,res,next)=>{
         email:req.body.email,
         phone:req.body.phone,
         role:req.body.role,
+        birthday:req.body.birthday,
+        city:req.body.city,
         profileImage:req.body.profileImage
 
     });

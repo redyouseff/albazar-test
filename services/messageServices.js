@@ -74,9 +74,9 @@ const sendMessage=asyncHandler(async(req,res,next)=>{
     if(receiverSocketId){
       io.to(receiverSocketId).emit("updateSidebar");
     }
-    if(senderSocketId){
-      io.to(senderSocketId).emit("updateSidebar");
-    }
+      if(senderSocketId){
+        io.to(senderSocketId).emit("updateSidebar");
+      }
 
 
     res.status(200).json({message});
@@ -217,8 +217,7 @@ const getMessages=asyncHandler(async(req,res,next)=>{
         $or:[
             {receiverId:req.params.id,senderId:req.currentUser._id},
             {receiverId:req.currentUser._id,senderId:req.params.id},
-
-        ]
+           ]      
     })
 
     res.status(200).json(message)  

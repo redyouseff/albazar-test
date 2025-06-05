@@ -6,8 +6,6 @@ const apiFeatures = require('../utilts/apiFeatures')
 const userModel = require('../models/userModel')
 
 
-
-
 const createOne=(model)=>{
     return asyncHandler(async(req,res,next)=>{
       
