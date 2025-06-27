@@ -222,7 +222,41 @@ const listingSchema = mongoose.Schema(
     },
     "publishedVia":{
       type:String
+    },
+
+
+
+    "number of building floors":{
+      type:String
+    },
+    "number of livingRooms":{
+      type:String
+    },
+    "deedType":{
+      type:String
+    },
+    "Horsepower":{
+      type:String
+    },
+    "Engine Capacity":{
+      type:String
+    },
+    "Drivetrain":{
+      type:String
+    },
+    "Imported":{
+      type:String
+    },
+    "Manufacturing Year":{
+      type:String
+    },
+    "Car Type":{
+      type:String
     }
+
+    
+
+
 
 
 

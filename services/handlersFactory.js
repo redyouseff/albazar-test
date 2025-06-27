@@ -4,6 +4,8 @@ const { model, models } = require('mongoose')
 const { appError } = require('../utilts/appError')
 const apiFeatures = require('../utilts/apiFeatures')
 const userModel = require('../models/userModel')
+const { compareSync } = require('bcrypt')
+const { AggregateQuery } = require('firebase-admin/firestore')
 
 
 const createOne=(model)=>{
@@ -95,21 +97,26 @@ const getAll=(model)=>{
 
         }
         
-     
-        const countDocuments=await model.countDocuments();
-        const queryStringObject={...req.query}
+        const query=await model.find({category:req.query.category});
+        const countDocuments= query.length||await model.countDocuments();
+        const queryStringObject={...req.query}  
         
         
         
         const Features= new apiFeatures(queryStringObject,model.find(filter))
         .search(model.modelName)
-        .paginate(countDocuments)
         .filter()
         .sort()
+        .paginate(countDocuments)
         .limitFields()
 
+        
+        
+
         const {paginationRedult,mongooseQuery}=Features
+      
         const result=await mongooseQuery;
+       
 
         res.status(200).json({paginate:paginationRedult,data:result})
         
